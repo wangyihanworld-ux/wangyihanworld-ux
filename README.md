@@ -1,29 +1,64 @@
-# 王怡涵｜财务分析与商业分析作品集
+# 王怡涵
 
-我正在申请香港经济、商业分析与相关硕士项目，职业方向聚焦财务 BP、FP&A 和商业分析。这里的项目用 Python、Excel 和可复现测试，把业务问题转化为可解释的分析模型。
+澳门科技大学会计专业本科生，求职方向为财务 BP、FP&A 与商业分析，同时准备申请香港经济、商业分析及相关硕士项目。
 
-> 五个核心项目全部使用程序生成的合成数据，不包含真实客户、公司、合同、费率、银行账户或 ERP 明细。项目结果用于展示方法，不构成真实经营预测。
+我关注的不只是算出数字，而是把经营问题拆成可解释、可复核、可交付的分析模型：明确业务口径，建立勾稽关系，用情景分析呈现风险，并把结果整理成管理层可以直接阅读的 Excel 报告。
 
-## 核心项目
+[完整项目作品集](PORTFOLIO.md) · [正式版本](#正式版本) · [联系邮箱](mailto:1230005615@student.must.edu.mo)
 
-| 顺序 | 项目 | 解决的问题 | 代表性结果 |
-| --- | --- | --- | --- |
-| 1 | [仓储成本与经营分析模型](https://github.com/wangyihanworld-ux/Warehouse-analysis-model) | 用 FIFO 重建批次流转，计算仓储费、库龄并检查数量守恒 | 67 项测试；演示仓储费 20,101.90 元、期末库存 375 吨 |
-| 2 | [预算差异分析与滚动预测模型](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model) | 将收入与利润差异拆成价格、销量、结构、成本和费用影响 | 22 项测试；收入有利差异 17,584 元、经营利润不利差异 10,724.36 元 |
-| 3 | [客户与产品盈利能力分析模型](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model) | 从收入追溯到贡献利润，识别高收入低利润客户与集中度风险 | 15 项测试；客户甲收入第一但贡献利润率 11.24%，整体为 29.50% |
-| 4 | [宏观经济情景与经营预测模型](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model) | 连接宏观驱动与收入，进行滚动回测、基准比较和情景预测 | 18 项测试；R² 96.57%，24 个月回测 MAPE 1.28%，含 VIF 与季节朴素基准 |
-| 5 | [营运资金与现金流预测模型](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model) | 用 DSO、DIO、DPO 解释现金转换周期与资金缺口 | 20 项测试；压力缺口 62.63 百万元、增长缺口 19.12 百万元，CCC 68→40 天 |
+## 能力概览
 
-## 分析方法
+- 财务分析：预算差异、滚动预测、贡献利润、营运资金、现金流与仓储成本。
+- 数据建模：Python、pandas、NumPy、Excel、Power BI、多元回归与情景分析。
+- 模型治理：输入校验、数量守恒、财务勾稽、样本外回测、基准模型和边界披露。
+- 自动化交付：合成数据、一键 Demo、Excel 管理报告、GUI、自动化测试与 GitHub Actions。
 
-- 财务建模：预算差异、滚动预测、贡献利润、营运资金和现金流滚动。
-- 数据分析：Python、pandas、NumPy、Excel 报告、回归、情景与敏感性分析。
-- 模型治理：输入校验、勾稽与守恒检查、样本外回测、透明基准、边界与局限披露。
-- 工程质量：一键合成数据 Demo、自动化测试、GitHub Actions、无真实业务数据。
+## 精选项目
 
-## 其他项目
+### 仓储成本与经营分析模型
 
-- [求职匹配与 STAR 表达规则原型](https://github.com/wangyihanworld-ux/ai-job-match)：浏览器本地运行，清楚区分规则演示与真实 AI。
-- [本地事务提醒](https://github.com/wangyihanworld-ux/task-reminder)：纯前端、localStorage、番茄钟及受校验的 JSON 备份导入。
+[代码](https://github.com/wangyihanworld-ux/Warehouse-analysis-model) · [v1.5.6](https://github.com/wangyihanworld-ux/Warehouse-analysis-model/releases/tag/v1.5.6)
 
-每个核心仓库均提供 README、一键 Demo、合成输入与管理报告；复现前请查看项目内的口径与局限说明。
+用 FIFO 重建批次流转，计算仓储费、库龄和期末库存。库存不足时整笔拒绝，避免将未分摊数量误认为实际出库。67 项测试通过；合成演示仓储费 20,101.90 元，期末库存 375 吨，数量守恒异常 0。
+
+![仓储分析报告](https://raw.githubusercontent.com/wangyihanworld-ux/Warehouse-analysis-model/main/docs/images/management-summary.png)
+
+### 预算差异与滚动预测模型
+
+[代码](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model) · [v0.1.0](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model/releases/tag/v0.1.0)
+
+把利润差异拆成销量、价格、结构、单位成本和固定费用影响，并用实际月份与未来情景构建全年预测。22 项测试通过；收入有利差异 17,584 元，经营利润不利差异 10,724.36 元。
+
+![预算差异管理摘要](https://raw.githubusercontent.com/wangyihanworld-ux/Budget-variance-forecast-model/main/docs/images/management-summary.png)
+
+### 客户与产品盈利能力分析模型
+
+[代码](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model) · [v0.1.0](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model/releases/tag/v0.1.0)
+
+从标价收入追溯到净收入、毛利和贡献利润，识别高收入低利润客户与集中度风险。15 项测试通过；客户甲收入第一但贡献利润率仅 11.24%，整体为 29.50%。
+
+### 宏观经济情景与经营预测模型
+
+[代码](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model) · [v1.0.0](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model/releases/tag/v1.0.0)
+
+连接五项宏观驱动与经营收入，用滚动回测、VIF 和季节朴素基准约束解释。18 项测试通过；合成数据 R² 96.57%，24 个月回测 MAPE 1.28%。
+
+### 营运资金与现金流预测模型
+
+[代码](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model) · [v1.0.0](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model/releases/tag/v1.0.0)
+
+用 DSO、DIO 和 DPO 驱动应收、库存、应付与现金滚动，单独披露资金缺口。20 项测试通过；压力缺口 62.63 百万元，改善情景 CCC 从 68 天降至 40 天。
+
+## 正式版本
+
+| 项目 | 版本 | 测试 | 主要输出 |
+| --- | --- | ---: | --- |
+| 仓储成本与经营分析 | [v1.5.6](https://github.com/wangyihanworld-ux/Warehouse-analysis-model/releases/tag/v1.5.6) | 67 | FIFO、仓储费、库龄、敏感性 |
+| 预算差异与滚动预测 | [v0.1.0](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model/releases/tag/v0.1.0) | 22 | 差异桥、年度预测、目标缺口 |
+| 客户与产品盈利能力 | [v0.1.0](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model/releases/tag/v0.1.0) | 15 | 贡献利润、集中度、敏感性 |
+| 宏观经济情景预测 | [v1.0.0](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model/releases/tag/v1.0.0) | 18 | 回归、回测、VIF、情景预测 |
+| 营运资金与现金流预测 | [v1.0.0](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model/releases/tag/v1.0.0) | 20 | 周转天数、现金滚动、资金缺口 |
+
+## 数据与结论边界
+
+五个公开 Demo 全部使用程序生成的合成数据，不包含真实客户、公司、合同、费率、银行账户或 ERP 明细。结果用于展示分析方法与工程能力，不构成真实经营预测。
