@@ -1,27 +1,22 @@
-# WYH — Finance and Economic Analysis Portfolio
+# Business Analytics & Decision Systems
 
-[中文](README.md) · [Detailed portfolio in Chinese](PORTFOLIO.md)
+Reproducible projects covering operating performance, inventory and cash flow, transaction controls, and observed digital-asset risk.
 
-I build reproducible models that connect business questions to financial definitions, reconciliations, scenario analysis and management reports. My interests include FP&A, finance business partnering, business analysis and postgraduate study in economics and analytics.
+[中文](README.md) · [Project and run index](PORTFOLIO.md) · [Validation](VALIDATION.md)
 
-## Selected work
+| Repository | Question and implementation |
+|---|---|
+| [Warehouse analysis](https://github.com/wangyihanworld-ux/Warehouse-analysis-model) | Connect FIFO batch movements to storage fees, historical month-end inventory, ageing, exception tracing and Excel reporting. |
+| [Budget variance and forecast](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model) | Reconcile volume, mix, price and cost changes to operating-profit variance; compare forecast assumptions and subsequent errors. |
+| [Working capital and cash flow](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model) | Model DSO/DIO/DPO and monthly cash gaps; separate turnover effects from OPEX assumptions. |
+| [Customer profitability](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model) | Trace net revenue to contribution profit; compare shared-cost drivers and segmentation thresholds without double-counting direct costs. |
+| [Macroeconomic scenarios](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model) | Evaluate time-ordered forecasts against simple baselines, explicit release-lag assumptions and common-year sensitivity checks. |
+| [Order and payment reconciliation](https://github.com/wangyihanworld-ux/Payment-settlement-reconciliation-lab) | Connect fulfillment and payment events while keeping settlement matching separate from order-level refund review. |
+| [Stablecoin peg risk](https://github.com/wangyihanworld-ux/Stablecoin-peg-risk-lab) | Measure USDC/DAI daily price deviations, duration, recovery and prior-only alerts using pinned public data. |
+| [Job-match prototype](https://github.com/wangyihanworld-ux/ai-job-match) | Demonstrate local keyword extraction, deterministic city-filtered ranking, JD comparison and standalone HTML export. No LLM or recruitment API. |
+| [Local task reminders](https://github.com/wangyihanworld-ux/task-reminder) | Two browser interfaces with recurring reminders, local persistence, a focus timer and validated JSON backups. [Live demo](https://wangyihanworld-ux.github.io/task-reminder/). |
+| [Project index](https://github.com/wangyihanworld-ux/wangyihanworld-ux) | Bilingual navigation, reproduction commands and verification records for these repositories. |
 
-| Project | Decision question | Evidence and limitations |
-| --- | --- | --- |
-| [Budget variance and forecast review](https://github.com/wangyihanworld-ux/Budget-variance-forecast-model/blob/main/README.en.md) | Why did profit miss budget, and how did forecast vintages perform? | Reconciled profit bridge; preserved actuals; versioned forecasts; MAE/RMSE/bias/WAPE by lead time. Reconstructed synthetic vintages, not forecasts issued historically. |
-| [Working capital and cash flow](https://github.com/wangyihanworld-ux/Working-capital-cashflow-forecast-model/blob/main/README.en.md) | When does growth create a funding gap? | Receivable/inventory/payable/cash rollforwards; nonnegative purchase constraints; explicit undefined ratios. No automatic borrowing or daily liquidity claim. |
-| [Macroeconomic scenario evaluation](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model/blob/main/README.en.md) | What can a macro model explain, and what can it forecast? | Separate conditional and lagged evaluations; VIF and transparent benchmarks; official public-data extension. No causal or real-time-vintage claim. |
-| [Customer profitability](https://github.com/wangyihanworld-ux/Customer-profitability-analysis-model/blob/main/README.en.md) | Which high-revenue customers contribute little profit? | Net-revenue/contribution reconciliation, concentration and configurable tiers. Price sensitivities assume constant volume. |
-| [Warehouse cost analysis](https://github.com/wangyihanworld-ux/Warehouse-analysis-model/blob/main/README.en.md) | How do batch movements and inventory age determine cost? | FIFO, quantity conservation, insufficient-stock rejection and Excel reports. Uses synthetic transactions. |
+Business and payment examples are synthetic. Public macroeconomic and price datasets retain source and license information. Tests establish implementation behavior, not production adoption or business gains. The macro regression does not consistently outperform a simple baseline; the selected stablecoin stress window does not establish predictive performance.
 
-## Public economic-data case
-
-The [Hong Kong WDI case](https://github.com/wangyihanworld-ux/Macroeconomic-scenario-forecast-model/blob/main/docs/public-data-case.md) uses World Bank annual GDP growth, inflation and ILO-modelled unemployment for 1991–2024. A lagged expanding-window regression is evaluated over 2009–2024.
-
-RMSE is 3.87 percentage points, versus 3.95 for a historical-mean baseline. The limited improvement is part of the finding. Latest-vintage data incorporate revisions; this is not a real-time historical backtest. Raw responses, retrieval metadata, checksums and offline reproduction commands are available in the repository.
-
-## Reproducibility and boundaries
-
-Each project includes source, tests, CI configuration and reproducible examples. The five business demonstrations contain synthetic data, not private records or claimed business impact. The public macro case is separately attributed. English READMEs explain execution, definitions and limitations; older release tags are historical snapshots and may not include the current enhancements.
-
-Skills demonstrated: Python, pandas, NumPy, Excel report automation, financial reconciliation, forecast evaluation and communication of model limitations.
+Implementation and validation are AI-assisted. No résumé, application materials or private customer records are included.
